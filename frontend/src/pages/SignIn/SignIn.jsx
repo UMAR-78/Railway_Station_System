@@ -76,13 +76,13 @@ const SignIn = () => {
             Sign In
           </button>
 
-          <div className="continueWithGoogle">
+          {/* <div className="continueWithGoogle">
             <p>Or</p>
             <div className="lkkjj">
               <p>Continue with google</p>
               <FcGoogle />
             </div>
-          </div>
+          </div> */}
         </form>
       </div>
     </div>

@@ -2,48 +2,39 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 import { signUp } from "../../redux/actions/Useractions";
 import { useDispatch } from "react-redux";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-
-
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
-
-  const [data,setdata] = useState(
-    {
-      firstName:"",
-      lastName:"",
-      email:"",
-      password:"",
-      confirmPassword:"",
-
-    }
-  )
+  const [data, setdata] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const onChange = (e) => {
     setdata((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
-
-
-
-
-  const onSubmit = (e)=>
-  {
-    e.preventDefault()
-    if(data.password !== data.confirmPassword)
-    {
-        toast.error("Password does not match!!")
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (data.password === data.confirmPassword) {
+      dispatch(signUp(data, navigate));
     }
-    dispatch(signUp(data, navigate))
-  }
-    return (
+    else
+    {
+      toast.error("Password does not match!!");
+    }
+  };
+  return (
     <div>
       <div className="SignUpDiv">
         <div className="textField">
@@ -82,11 +73,14 @@ const SignUp = () => {
           <div className="formRow">
             <div className="formField">
               <label>Email:</label>
-              <input type="text" name="email" 
-              value={data.value}
-              onChange={onChange}
-              required
-              placeholder="abc@gmail.com" />
+              <input
+                type="text"
+                name="email"
+                value={data.value}
+                onChange={onChange}
+                required
+                placeholder="abc@gmail.com"
+              />
             </div>
           </div>
 
@@ -121,8 +115,8 @@ const SignUp = () => {
           <div className="lastRow">
             <p className="lastRowText">
               Already have an account?
-              <Link to = '/signin'>
-              <span className="span-text"> Sign In</span>
+              <Link to="/signin">
+                <span className="span-text"> Sign In</span>
               </Link>
             </p>
             <button type="submit">Sign Up</button>

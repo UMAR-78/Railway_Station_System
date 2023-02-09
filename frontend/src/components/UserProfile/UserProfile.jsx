@@ -6,7 +6,11 @@ import "./UserProfile.css";
 import { Link } from "react-router-dom";
 
 const UserProfile = () => {
+
+    
   const userData = JSON.parse(localStorage.getItem("user"));
+
+
   return (
     <>
       <div className="profilSection">
@@ -26,10 +30,7 @@ const UserProfile = () => {
             <span> {userData.email}</span>
           </div>
 
-          <div className="profileFields">
-            <h4>Created At:</h4>
-            <span> {userData.createdAt}</span>
-          </div>
+         
 
           <div className="profileFields">
             <Link to = '/updateProfile'>

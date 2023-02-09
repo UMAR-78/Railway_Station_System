@@ -19,6 +19,7 @@ const RegisterUser = async (req, res) => {
     const userExists = await User.findOne({ email });
     if (userExists) {
       return res.status(400).json({
+        status : 400,
         success: false,
         message: "User already exists!",
       });
@@ -38,7 +39,10 @@ const RegisterUser = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "User created successfully!!",
-      user,
+      _id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
       token: generateToken(user._id),
     });
   } catch (error) {
@@ -57,12 +61,17 @@ const aunthenticateUser = async (req, res) => {
   if (validUser && (await bcrypt.compare(password, validUser.password))) {
     return res.status(200).json({
       success: true,
+      _id: validUser.id,
       message: "Welcome " + validUser.firstName,
-      validUser,
+      email: validUser.email,
+      firstName : validUser.firstName,
+      lastName : validUser.lastName,
+      role : validUser.role,
       token: generateToken(validUser._id),
     });
   } else {
     res.status(400).json({
+      success:false,
       message: "Invalid credentials!!!",
     });
   }

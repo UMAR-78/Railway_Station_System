@@ -2,21 +2,19 @@ const {createTransport} = require('nodemailer');
 
 const sendEmail = async (to , subject, text) =>
 {   
-    const tarnspoter = createTransport(
-        {host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
+    const transporter = createTransport({
+        service: 'gmail',
         auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
-        }}
-    );
-
-
-    await tarnspoter.sendMail(
-        {
-               to , subject , text
+          user: '',
+          pass: ''
         }
-    )
+      });
+    
+      
+      await transporter.sendMail({
+        to, subject , text , 
+        from:"umarjamiljamil31@gmail.com" 
+      });
 }
 
 module.exports

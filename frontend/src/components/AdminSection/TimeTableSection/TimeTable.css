@@ -1,0 +1,136 @@
+.timetable-container {
+  margin-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.salkmsla
+{
+  color: yellow;
+}
+
+.timetable-card {
+  display: flex;
+  /* max-width: max-content; */
+  flex-direction: column;
+  /* gap: 0px; */
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  width: 250px; /* Adjust the width as needed */
+  height: 470px;
+}
+
+.timetable-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.timetable-card img {
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid #ddd;
+}
+
+.timetable-card div {
+  padding: 10px;
+}
+
+.timetable-card h3 {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timetable-card h3 span {
+  color: blue; /* Change color as needed */
+}
+
+.timetable-card h5 {
+  margin-bottom: 5px;
+}
+
+.timetable-card p {
+  color: #333; /* Change color as needed */
+}
+
+
+.deleteicon , .editicon
+{
+  font-size: 25px;
+  color: #ffb703; /* Change color as needed */
+  cursor: pointer;
+;
+}
+.iconcontainer
+{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 140px;
+}
+
+/* Add these styles to your existing stylesheet or create a new one */
+
+/* Style for the container of the select element */
+.select-container {
+  margin-bottom: 5px;
+}
+
+/* Style for the select element */
+.select-styled {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+}
+
+/* Style for the arrow icon in the select */
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Optional: Style for the dropdown options */
+.select-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #fff;
+}
+
+/* Show the dropdown options when the select is open */
+.select-styled:focus + .select-options {
+  display: block;
+}
+
+/* Style for each dropdown option */
+.select-options option {
+  padding: 5px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Hover effect for dropdown options */
+.select-options option:hover {
+  background-color: #f0f0f0;
+}

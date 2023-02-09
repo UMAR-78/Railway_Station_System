@@ -1,0 +1,28 @@
+.station-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .station-table th, .station-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .station-table th {
+    background-color: #ffb703;
+    color: white;
+  }
+  
+  .station-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .update-icon, .delete-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+ 

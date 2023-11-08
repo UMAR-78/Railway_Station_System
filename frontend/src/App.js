@@ -1,19 +1,17 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import HeroSection from './components/Hero/Hero'
+import HeroSection from "./components/Hero/Hero";
+import SearchSection from "./components/Search/Search";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <HeroSection/>
-     
-
+      <SearchSection/>
       <Router>
-        <Routes>
-          
-        </Routes>
+        <Routes></Routes>
       </Router>
     </>
   );

@@ -17,5 +17,11 @@
     
 }
 .headerText{
-    line-height: 40px;   
+    line-height: 40px;  
+  color: white;
+
+}
+.heroText
+{
+  color: white;
 }

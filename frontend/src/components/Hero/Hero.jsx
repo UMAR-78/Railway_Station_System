@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="HeroSection">
       <div className="heading">
-        <h1>
+        <h1 className="heroText">
           Arrive with Ease, <br />
           Depart with Excitement.
         </h1>

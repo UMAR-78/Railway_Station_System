@@ -1,0 +1,21 @@
+.upperSection
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h5{
+    color: #003b95;
+}
+.upperSection
+{
+ padding: 0px 70px;
+}
+.browseAllButton
+{
+    border: 1.5px solid #003b95;
+    color: #003b95;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}

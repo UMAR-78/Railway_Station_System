@@ -1,34 +1,25 @@
-const User = require("../models/userModel");
+const User = require('../models/userModel')
 
-const RegisterUser = async (req, res) => {
-  const { Name, email, password, role } = req.body;
+const RegisterUser = async(req , res) =>
+{
+    const { firstName , lastName , email , password} = req.body
 
-  if (!Name || !email || !password || !role) {
-    return res.status(404).json({
-      success: false,
-      message: "Please enter all fields!!!",
-    });
-  }
-  // check if user already exists
-  const userExits = await User.find({ email });
 
-  if (userExits) {
-    return res.status(401).json({
-      message: "User already exists!!",
-    });
-  }
-  
-  try {
-    const user = await User.create(req.body);
-    return res.status(200).json({
-      success: true,
-      user,
-    });
-  } catch (error) {
-    return res.status(500).json({ message: "Internal Server Error" });
-  }
-};
+    if(!firstName || !email || !password)
+    {
+      res.status(400).json(
+        {
+          success:false,
+          message:("Please enter all fields!!")
+        }
+      )
+    }
 
-module.exports = {
-  RegisterUser,
-};
+    // check if user already exists
+
+    const userExists = await User.find({email})
+    if(!userExists) {
+      
+    }
+
+}

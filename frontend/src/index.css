@@ -30,3 +30,13 @@ a {
   border-radius: 20px;
   transition: 0.5s ease;
 }
+
+
+
+/* reuseable line */
+
+.line
+{
+  width: 70%;
+  height: ;
+}

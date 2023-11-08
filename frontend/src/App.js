@@ -8,10 +8,7 @@ function App() {
     <>
       <Header />
       <HeroSection/>
-      <HeroSection/>
-      <HeroSection/>
-      <HeroSection/>
-      <HeroSection/>
+     
 
       <Router>
         <Routes>

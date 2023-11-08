@@ -1,0 +1,53 @@
+.header
+{
+    width: 100%;
+    background-color: #003B95;
+    color: white;
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.logo
+{
+    cursor: pointer;
+}
+.navItems
+{
+    padding-left: 40%;
+
+}
+.navItems a 
+{
+    position: relative;
+}
+.navItems ul
+{
+    display: flex;
+    align-items: center;
+    /* padding: 10px 10px; */
+    /* padding-left: 10px; */
+    
+}
+.navItems li{
+    margin-right: 30px;
+    position: relative;
+}
+
+.navItems a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Adjust the height and color as needed */
+    background-color: #fff; /* Line color */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Transition for the line */
+  }
+  
+  /* When hovering, expand the line from right to left */
+  .navItems a:hover::after {
+    width: 100%;
+  }

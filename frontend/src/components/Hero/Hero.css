@@ -1,0 +1,21 @@
+.HeroSection {
+  background-image: url("../../../public/Hero Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 30%; */
+  height: 80vh;
+}
+
+.heading
+{
+    color: white;
+    padding-top: 12%;
+    padding-right:10px;
+    margin-left: 5%;
+    font-size: 1.8rem;
+    line-height: 70px;
+    
+}
+.headerText{
+    line-height: 40px;   
+}

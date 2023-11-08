@@ -9,7 +9,9 @@ function App() {
     <>
       <Header/>
       <HeroSection/>
+      <div className="Separator"></div>
       <SearchSection/>
+      <div className="Separator"></div>
       <Router>
         <Routes></Routes>
       </Router>

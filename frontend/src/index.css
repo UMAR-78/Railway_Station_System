@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,600&display=swap");
 
+
+
 * {
   padding: 0;
   box-sizing: border-box;
@@ -26,18 +28,17 @@ a {
 .button:hover {
   background-color: #003b95;
   color: white;
-  border:0.5px solid white;
+  border: 0.5px solid white;
   border-radius: 20px;
   transition: 0.5s ease;
 }
 
-
-
 /* reuseable line */
 
-.line
-{
-  width: 70%;
-  height: 10%;
-  color: #003b95;
+.Separator {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 10px;
+  margin-top: 30px;
+  background-color: #ffb703; /* Yellow color for the line */
 }

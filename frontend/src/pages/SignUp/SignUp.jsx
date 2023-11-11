@@ -29,7 +29,7 @@ const SignUp = () => {
   {
     e.preventDefault()
 
-    if(data.password != data.confirmPassword)
+    if(data.password !== data.confirmPassword)
     {
         toast.error("Password do not match!!")
     }

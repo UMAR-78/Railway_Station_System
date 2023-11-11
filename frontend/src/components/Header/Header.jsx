@@ -24,9 +24,12 @@ const Navbar = () => {
       </div>
 
       <div>
-        {/* <Link to="/signin"></Link> */}
-        <button  className="button"> Sign In</button>        
-        <button className="button"> Sign Up</button>
+        <Link to="/signin">
+          <button type="button" className="button">
+            {" "}
+            Sign In
+          </button>
+        </Link>
       </div>
     </div>
   );

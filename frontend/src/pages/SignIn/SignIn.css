@@ -1,36 +1,102 @@
-/* Login.css */
+.heading_signupfrom{
+  color: #003B95;
+  text-align: center
+  ;
+}
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  .login-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+.textField
+{
+  text-align: center;
+}
 
-  
+.SignUpForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  color: #003B95;
+  border: 1px solid beige;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.formField {
+  flex: 1;
+}
+
+.formField label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formField input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formField input,
+.formField select {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.SignInbutton {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffb703;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.SignInbutton:hover {
+  background-color: #ffb703;
+}
+
+.lastRow
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lastRowText
+{
+  font-size: 11px;
+}
+.span-text
+{
+  text-decoration: underline;
+  color: #ffb703;
+  cursor: pointer;
+}
+.ForgetPasswordText
+{
+  font-size: 10px;
+  cursor: pointer;
+}
+.continueWithGoogle
+{
+  text-align: center;
+  margin-top: 20px;
+}
+.lkkjj
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+ /* margin-right: 20px; */
+}

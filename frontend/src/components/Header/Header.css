@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 .logo
 {

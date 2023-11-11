@@ -2,7 +2,6 @@ import React from "react";
 // import "./Header.css";
 import "./Header.css";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
   return (
     <div className="header">
@@ -25,7 +24,8 @@ const Navbar = () => {
       </div>
 
       <div>
-        <button className="button"> Sign In</button>
+        {/* <Link to="/signin"></Link> */}
+        <button  className="button"> Sign In</button>        
         <button className="button"> Sign Up</button>
       </div>
     </div>

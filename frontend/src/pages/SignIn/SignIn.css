@@ -1,11 +1,9 @@
-.heading_signupfrom{
-  color: #003B95;
-  text-align: center
-  ;
+.heading_signupfrom {
+  color: #003b95;
+  text-align: center;
 }
 
-.textField
-{
+.textField {
   text-align: center;
 }
 
@@ -15,7 +13,7 @@
   max-width: 350px;
   margin: 0 auto;
   padding: 10px 10px;
-  color: #003B95;
+  color: #003b95;
   border: 1px solid beige;
 }
 
@@ -44,10 +42,10 @@
 
 .formField input,
 .formField select {
-width: 100%;
-padding: 8px;
-border: 1px solid #ccc;
-border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .SignInbutton {
@@ -65,38 +63,34 @@ border-radius: 4px;
   background-color: #ffb703;
 }
 
-.lastRow
-{
+.lastRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.lastRowText
-{
+.lastRowText {
   font-size: 11px;
 }
-.span-text
-{
+.span-text {
   text-decoration: underline;
   color: #ffb703;
   cursor: pointer;
 }
-.ForgetPasswordText
-{
+.ForgetPasswordText {
   font-size: 10px;
   cursor: pointer;
 }
-.continueWithGoogle
-{
+.continueWithGoogle {
   text-align: center;
   margin-top: 20px;
 }
-.lkkjj
-{
+.lkkjj {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 2px;
   cursor: pointer;
- /* margin-right: 20px; */
+  border: 1px solid beige;
+  padding: 10px;
+  margin-top: 20px;
 }

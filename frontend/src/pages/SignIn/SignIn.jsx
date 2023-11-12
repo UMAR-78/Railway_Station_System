@@ -41,7 +41,6 @@ const SignUp = () => {
           </div>
 
 
-          
           <button className="SignInbutton" type="submit">
             Sign In
           </button>

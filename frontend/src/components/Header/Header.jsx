@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <div className="header">
       <div className="logo">
-        <h2>RailBooker.com</h2>
+        <Link to="/">
+          <h2 className="logoText">RailBooker.com</h2>
+        </Link>
       </div>
 
       <div className="navItems">
@@ -28,6 +30,13 @@ const Navbar = () => {
           <button type="button" className="button">
             {" "}
             Sign In
+          </button>
+        </Link>
+
+        <Link to="/signup">
+          <button type="button" className="button">
+            {" "}
+            Sign Up
           </button>
         </Link>
       </div>

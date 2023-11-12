@@ -12,9 +12,14 @@
     position: sticky;
     top: 0;
 }
+.logoText
+{
+    color: #fff;
+}
 .logo
 {
     cursor: pointer;
+    /* color: #fff; */
 }
 .navItems
 {
@@ -24,6 +29,7 @@
 .navItems a 
 {
     position: relative;
+    color: #fff;
 }
 .navItems ul
 {

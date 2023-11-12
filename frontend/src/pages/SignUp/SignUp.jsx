@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import axios from 'axios'
 
 const SignUp = () => {
 
@@ -112,7 +114,9 @@ const SignUp = () => {
           <div className="lastRow">
             <p className="lastRowText">
               Already have an account?
+              <Link to = '/signin'>
               <span className="span-text"> Sign In</span>
+              </Link>
             </p>
             <button type="submit">Sign Up</button>
           </div>

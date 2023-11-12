@@ -13,7 +13,7 @@ li {
 }
 a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 .button {
   color: #003b95;
@@ -24,13 +24,13 @@ a {
   text-align: center;
   font-weight: 600;
   transition: all 0.5s ease;
+  
 }
+
 .button:hover {
+  border-radius: 50px;
   background-color: #003b95;
   color: white;
-  border: 0.5px solid white;
-  border-radius: 20px;
-  transition: 0.5s ease;
 }
 
 /* reuseable line */

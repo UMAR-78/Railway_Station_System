@@ -9,7 +9,8 @@ import MainPage from "./pages/MainPage/MainPage";
 import ForgetPassword from "./pages/ForgetPassword/ForgetPassword";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import Contact from "./components/Contact/Contact";
-
+import AboutUs from "./components/AboutUs/AboutUs";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,15 +24,16 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgetpassword" element={<ForgetPassword />} />
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
-            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<AboutUs />} />
 
-
-
-            {/* Add more routes for other pages if needed */}
+           
           </Routes>
+         
         </div>
       </Router>
-      <ToastContainer/>
+
+      <ToastContainer />
     </>
   );
 }

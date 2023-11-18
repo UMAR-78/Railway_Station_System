@@ -14,14 +14,18 @@ const Navbar = () => {
       <div className="navItems">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">
+              <a href="#home">Home</a>
+            </Link>
           </li>
           <li>
-            <a href="#aboutus">About Us</a>
+            <Link to="/about">
+              <a href="#aboutus">About Us</a>
+            </Link>
           </li>
           <li>
-            <Link to = "/contact">
-            <a href="#contact">Contact</a>
+            <Link to="/contact">
+              <a href="#contact">Contact</a>
             </Link>
           </li>
         </ul>

@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className='footer'>
           <div>
-            <h2>All Rights Reserved</h2>
+            <h2 className='footerHeading'>All Rights Reserved</h2>
             <p className='p_tag'> &copy; RailBooker.com</p>
           </div>
       </div>

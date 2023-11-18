@@ -33,20 +33,21 @@ const SignUp = () => {
           <div className="lastRow">
             <p className="lastRowText">
               Create new account.
-              <Link to = '/signup'> 
-              <span className="span-text"> Sign Up</span>
+              <Link to="/signup">
+                <span className="span-text"> Sign Up</span>
               </Link>
             </p>
-            <p className="ForgetPasswordText">Forget Password?</p>
-          </div>
 
+            <Link to="/forgetpassword">
+              <p className="ForgetPasswordText">Forget Password?</p>
+            </Link>
+          
+          </div>
 
           <button className="SignInbutton" type="submit">
             Sign In
           </button>
 
-          
-          
           <div className="continueWithGoogle">
             <p>Or</p>
             <div className="lkkjj">

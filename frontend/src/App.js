@@ -6,6 +6,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MainPage from "./pages/MainPage/MainPage";
+import ForgetPassword from "./pages/ForgetPassword/ForgetPassword";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
 
 
 function App() {
@@ -18,6 +20,10 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/forgetpassword" element={<ForgetPassword />} />
+            <Route path="/resetpassword/:token" element={<ResetPassword />} />
+
+
             {/* Add more routes for other pages if needed */}
           </Routes>
         </div>

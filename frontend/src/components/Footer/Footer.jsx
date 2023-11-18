@@ -1,12 +1,13 @@
 import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
   return (
     <div>
-      <div className='leftSection'>
+      <div className='footer'>
           <div>
-            <h2>RailBooker.com</h2>
-            <p>Connect with us anytime, anywhere. <br /> Our customer service team is ready to assist you. <br /> Your convenience is our mission</p>
+            <h2>All Rights Reserved</h2>
+            <p className='p_tag'> &copy; RailBooker.com</p>
           </div>
       </div>
     </div>

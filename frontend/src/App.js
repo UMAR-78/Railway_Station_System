@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MainPage from "./pages/MainPage/MainPage";
 import ForgetPassword from "./pages/ForgetPassword/ForgetPassword";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import Contact from "./components/Contact/Contact";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgetpassword" element={<ForgetPassword />} />
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
+            <Route path="/contact" element={<Contact/>}/>
+
 
 
             {/* Add more routes for other pages if needed */}

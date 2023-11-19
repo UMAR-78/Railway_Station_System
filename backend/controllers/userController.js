@@ -55,10 +55,7 @@ const aunthenticateUser = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Welcome " + validUser.firstName,
-      _id: validUser.id,
-      name: validUser.firstName + " " + validUser.lastName,
-      email: validUser.email,
-      token: generateToken(validUser._id),
+      validUser,
     });
   } else {
     res.status(400).json({

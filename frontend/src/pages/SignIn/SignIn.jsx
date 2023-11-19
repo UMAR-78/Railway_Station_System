@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.css";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
-const SignUp = () => {
+import { useDispatch } from "react-redux";
+import login from '../../redux/actions/user'
+const SignIn = () => {
+
+      const [email , setEmail] = useState('')
+      const [password , setPassword] = useState('')
+      const dispatch = useDispatch()
+  
+      const submitHandler =(e)=>
+      { 
+            e.preventDefault()
+            dispatch(login(email, password))
+            
+      }
   return (
+
+
+
+
     <div>
       <div className="SignUpDiv">
         <div className="textField">
@@ -11,11 +28,13 @@ const SignUp = () => {
           <p>RailBooker.com</p>
         </div>
 
-        <form action="" className="SignUpForm">
+        <form onSubmit={submitHandler} className="SignUpForm">
           <div className="formRow">
             <div className="formField">
               <label>Email:</label>
-              <input type="text" name="from" placeholder="abc@gmail.com" />
+              
+              <input type="text" name="email" value={email} 
+                onChange={(e) => setEmail(e.target.value)} required placeholder="abc@gmail.com" />
             </div>
           </div>
 
@@ -24,8 +43,12 @@ const SignUp = () => {
               <label>Password:</label>
               <input
                 type="password"
-                name="from"
+                name="password"
+                value={password}
+                required
                 placeholder="Enter your password.."
+                onChange={(e) => setPassword(e.target.value)}
+
               />
             </div>
           </div>
@@ -61,4 +84,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;

@@ -1,26 +1,27 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "./SignIn.css";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import login from '../../redux/actions/user'
+import { login } from "../../redux/actions/Useractions";
+
+
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
-      const [email , setEmail] = useState('')
-      const [password , setPassword] = useState('')
-      const dispatch = useDispatch()
-  
-      const submitHandler =(e)=>
-      { 
-            e.preventDefault()
-            dispatch(login(email, password))
-            
-      }
+  const dispatch = useDispatch()
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(login(email , password ,navigate))
+    
+  };
+
   return (
-
-
-
-
     <div>
       <div className="SignUpDiv">
         <div className="textField">
@@ -32,9 +33,15 @@ const SignIn = () => {
           <div className="formRow">
             <div className="formField">
               <label>Email:</label>
-              
-              <input type="text" name="email" value={email} 
-                onChange={(e) => setEmail(e.target.value)} required placeholder="abc@gmail.com" />
+
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="abc@gmail.com"
+              />
             </div>
           </div>
 
@@ -48,7 +55,6 @@ const SignIn = () => {
                 required
                 placeholder="Enter your password.."
                 onChange={(e) => setPassword(e.target.value)}
-
               />
             </div>
           </div>
@@ -64,7 +70,6 @@ const SignIn = () => {
             <Link to="/forgetpassword">
               <p className="ForgetPasswordText">Forget Password?</p>
             </Link>
-          
           </div>
 
           <button className="SignInbutton" type="submit">

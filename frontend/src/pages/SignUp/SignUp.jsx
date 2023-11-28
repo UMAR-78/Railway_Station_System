@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { signUp } from "../../redux/actions/Useractions";
+import { useDispatch } from "react-redux";
 
 const SignUp = () => {
+
+
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const [data,setdata] = useState(
     {
@@ -30,11 +37,11 @@ const SignUp = () => {
   const onSubmit = (e)=>
   {
     e.preventDefault()
-
     if(data.password !== data.confirmPassword)
     {
-        toast.error("Password do not match!!")
+        toast.error("Password does not match!!")
     }
+    dispatch(signUp(data, navigate))
   }
     return (
     <div>

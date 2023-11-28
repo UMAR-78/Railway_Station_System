@@ -11,29 +11,39 @@ import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import Contact from "./components/Contact/Contact";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/Footer/Footer";
+import UserProfile from "./components/UserProfile/UserProfile";
+import ChangePassword from "./components/UserProfile/ChangePassword";
+import UpdateProfile from "./components/UserProfile/UpdateProfile";
 
 function App() {
   return (
     <>
-      <Router>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/forgetpassword" element={<ForgetPassword />} />
-            <Route path="/resetpassword/:token" element={<ResetPassword />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<AboutUs />} />
+        <Router>
+          <div>
+            <Header />
+            <Routes>
+              <Route path="/" element={<MainPage />} />
 
-           
-          </Routes>
-         
-        </div>
-      </Router>
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/forgetpassword" element={<ForgetPassword />} />
 
-      <ToastContainer />
+
+              <Route path="/user/profile" element={<UserProfile />} />   
+              <Route path="/changePassword" element={<ChangePassword />} />   
+              <Route path="/updateProfile" element={<UpdateProfile/>} />   
+
+
+
+              <Route path="/resetpassword/:token" element={<ResetPassword />} />
+              
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<AboutUs />} />
+                    
+            </Routes>
+          </div>
+        </Router>
+        <ToastContainer />
     </>
   );
 }

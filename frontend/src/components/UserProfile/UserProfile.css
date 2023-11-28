@@ -1,0 +1,28 @@
+.profilSection{
+    margin-top: 30px;
+    margin-left: 350px;
+  
+    /* align-items: ; */
+}
+
+.profileHeader
+{
+    margin-right:80px;
+}
+
+span{
+    color: #adb5bd;
+}
+.profileFields
+{
+    display:flex; 
+    gap: 4px;
+}
+.profileHeaderParent
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    /* align-items: center; */
+}

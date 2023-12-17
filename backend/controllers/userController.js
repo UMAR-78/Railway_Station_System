@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { sendEmail } = require("../utils/sendMail");
+// const useraudit = require('../models/UserAudit')
+const userAudit = require("./userAuditController");
+const BackendLog = require('../models/BackednLog')
 
 // Register User
 const RegisterUser = async (req, res) => {
@@ -11,6 +14,13 @@ const RegisterUser = async (req, res) => {
     // console.log(firstName, lastName, email, password);
 
     if (!firstName || !email || !password) {
+      // log enteries
+      await BackendLog.create({
+        fileName: "userController",
+        functionName: "register",
+        details: "Please Enter all fields",
+      });
+
       return res.status(404).json({
         success: false,
         message: "Please enter all required fields!!",
@@ -18,8 +28,14 @@ const RegisterUser = async (req, res) => {
     }
     const userExists = await User.findOne({ email });
     if (userExists) {
+      await BackendLog.create({
+        fileName: "userController",
+        functionName: "register",
+        details: "User Already Exist",
+      });
+
       return res.status(400).json({
-        status : 400,
+        status: 400,
         success: false,
         message: "User already exists!",
       });
@@ -36,6 +52,9 @@ const RegisterUser = async (req, res) => {
       email: email,
       password: hashedPassword,
     });
+
+    userAudit(user._id, "INSERT", "-", user);
+
     return res.status(200).json({
       success: true,
       message: "User created successfully!!",
@@ -64,14 +83,20 @@ const aunthenticateUser = async (req, res) => {
       _id: validUser.id,
       message: "Welcome " + validUser.firstName,
       email: validUser.email,
-      firstName : validUser.firstName,
-      lastName : validUser.lastName,
-      role : validUser.role,
+      firstName: validUser.firstName,
+      lastName: validUser.lastName,
+      role: validUser.role,
       token: generateToken(validUser._id),
     });
   } else {
+    // logsss-------------
+    await BackendLog.create({
+      fileName: "userController",
+      functionName: "login",
+      details: "Incorrect Email or Password",
+    });
     res.status(400).json({
-      success:false,
+      success: false,
       message: "Invalid credentials!!!",
     });
   }
@@ -202,11 +227,15 @@ const ForgetPassword = async (req, res) => {
 
     const resetToken = await getResetToken();
 
-    const url = `${process.env.FRONTEND_URL}/resetPassword/${resetToken} }`
+    const url = `${process.env.FRONTEND_URL}/resetPassword/${resetToken} }`;
 
     const message = `Click on the link to reset your password . ${url} . If you have not requested plese ignore.`;
 
-    await sendEmail(validUser.email, "RailBooker.com reset password link", message);
+    await sendEmail(
+      validUser.email,
+      "RailBooker.com reset password link",
+      message
+    );
 
     res.status(200).json({
       success: true,

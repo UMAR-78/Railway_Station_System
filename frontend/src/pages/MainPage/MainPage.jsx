@@ -15,7 +15,7 @@ const MainPage = () => {
     return (
       <>
       <HeroSection />
-        <SearchSection />
+        {/* <SearchSection /> */}
         <Destination />
         <Footer />
       </>
